@@ -16,7 +16,7 @@ BuildRequires:	meson >= 0.48
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	gtk-update-icon-cache
 Requires:	SDL2 >= 2.0.5
@@ -52,15 +52,15 @@ zsh-completion for scrcpy.
 cp -p %{SOURCE1} %{name}-server
 
 %build
-%meson build \
+%meson \
 	-Dprebuilt_server=%{name}-server
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
