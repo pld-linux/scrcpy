@@ -1,13 +1,13 @@
 Summary:	Display and control your Android device
 Name:		scrcpy
-Version:	3.2
+Version:	3.3
 Release:	1
 License:	Apache v2.0
 Group:		Applications
 Source0:	https://github.com/Genymobile/scrcpy/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	6f64fbaf1e55ad5316f995e6140d9561
+# Source0-md5:	544d43ebe7a89f667cec640ae209d5ba
 Source1:	https://github.com/Genymobile/scrcpy/releases/download/v%{version}/%{name}-server-v%{version}
-# Source1-md5:	8afe92f420a43d2b7b62ef7e29f2df40
+# Source1-md5:	2dd04f7afb2bfb86d4212e665105c11b
 URL:		https://github.com/Genymobile/scrcpy
 BuildRequires:	SDL2-devel >= 2.0.5
 BuildRequires:	ffmpeg-devel
