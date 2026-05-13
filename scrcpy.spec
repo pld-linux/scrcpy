@@ -1,15 +1,15 @@
 Summary:	Display and control your Android device
 Name:		scrcpy
-Version:	3.3.4
+Version:	4.0
 Release:	1
 License:	Apache v2.0
 Group:		Applications
 Source0:	https://github.com/Genymobile/scrcpy/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	4408fac7d28381131f0c94e9aa647764
+# Source0-md5:	a9a2423fd41b00f47c5464254fab9c2c
 Source1:	https://github.com/Genymobile/scrcpy/releases/download/v%{version}/%{name}-server-v%{version}
-# Source1-md5:	9153cfe86c4cac296581d022889683af
+# Source1-md5:	354ace864a3f58f54a41bd1563209414
 URL:		https://github.com/Genymobile/scrcpy
-BuildRequires:	SDL2-devel >= 2.0.5
+BuildRequires:	SDL3-devel >= 3.2.0
 BuildRequires:	ffmpeg-devel
 BuildRequires:	libusb-devel
 BuildRequires:	meson >= 0.49
@@ -19,7 +19,7 @@ BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 2.042
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	gtk-update-icon-cache
-Requires:	SDL2 >= 2.0.5
+Requires:	SDL3 >= 3.2.0
 Requires:	android-tools
 Requires:	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -80,6 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_datadir}/scrcpy/scrcpy-server
 %{_desktopdir}/scrcpy.desktop
 %{_desktopdir}/scrcpy-console.desktop
+%{_iconsdir}/hicolor/256x256/apps/disconnected.png
 %{_iconsdir}/hicolor/256x256/apps/scrcpy.png
 %{_mandir}/man1/scrcpy.1*
 
